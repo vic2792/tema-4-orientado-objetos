@@ -17,7 +17,7 @@ public class HighschoolReader {
         System.out.println ("name");
         String name = scanner.nextLine();
 
-        System.out.println("cuantos estudiantes tienes");
+        System.out.println("cuantos estudiantes tienes:");
         int number = scanner.nextInt();
         scanner.nextLine();
 
