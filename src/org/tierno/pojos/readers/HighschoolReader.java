@@ -23,7 +23,7 @@ public class HighschoolReader {
 
         Student[] students = new Student[number];
         for (int i = 0; i < number; i++) {
-            System.out.println("introduce los datos del estudiantes ");
+            System.out.println("introduce los datos del estudiantes que molan");
             students [i] = studentReader.read();
         }
         return new Highschool(students, name);
