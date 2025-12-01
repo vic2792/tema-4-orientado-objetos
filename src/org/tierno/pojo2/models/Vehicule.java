@@ -1,13 +1,25 @@
 package org.tierno.pojo2.models;
 
-public class Vehicule {
-    private String vehicule;
+import java.util.Objects;
 
-    public String getVehicule() {
+public class Vehicule {
+    private VehiculeType vehicule;
+    private String velocidadMax;
+    private String color;
+    private String matricula;
+
+    public Vehicule(VehiculeType vehicule, String velocidadMax, String color, String matricula) {
+        this.vehicule = vehicule;
+        this.velocidadMax = velocidadMax;
+        this.color = color;
+        this.matricula = matricula;
+    }
+
+    public VehiculeType getVehicule() {
         return vehicule;
     }
 
-    public void setVehicule(String vehicule) {
+    public void setVehicule(VehiculeType vehicule) {
         this.vehicule = vehicule;
     }
 
@@ -20,30 +32,31 @@ public class Vehicule {
     }
 
     public String getColor() {
-        return Color;
+        return color;
     }
 
     public void setColor(String color) {
-        Color = color;
+        this.color = color;
     }
 
     public String getMatricula() {
-        return Matricula;
+        return matricula;
     }
 
     public void setMatricula(String matricula) {
-        Matricula = matricula;
+        this.matricula = matricula;
     }
 
-    public Vehicule(String vehicule, String velocidadMax, String color, String matricula) {
-        this.vehicule = vehicule;
-        this.velocidadMax = velocidadMax;
-        Color = color;
-        Matricula = matricula;
+    @Override
+    public boolean equals(Object o) {
+        if (o == null || getClass() != o.getClass()) return false;
+        Vehicule vehicule1 = (Vehicule) o;
+        return vehicule == vehicule1.vehicule && Objects.equals(velocidadMax, vehicule1.velocidadMax) && Objects.equals(color, vehicule1.color) && Objects.equals(matricula, vehicule1.matricula);
     }
 
-    private String velocidadMax;
-    private String Color;
-    private String Matricula;
+    @Override
+    public int hashCode() {
+        return Objects.hash(vehicule, velocidadMax, color, matricula);
+    }
 }
 

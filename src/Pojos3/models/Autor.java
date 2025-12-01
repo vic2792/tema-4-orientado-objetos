@@ -1,6 +1,6 @@
 package Pojos3.models;
 
-public class autor {
+public class Autor {
     public int getNif() {
         return Nif;
     }
@@ -25,7 +25,7 @@ public class autor {
         this.apellidos = apellidos;
     }
 
-    public autor(int nif, String apellidos, String nombres) {
+    public Autor(int nif, String apellidos, String nombres) {
         Nif = nif;
         this.apellidos = apellidos;
         this.nombres = nombres;
