@@ -1,6 +1,9 @@
 package pojos4.models;
 
 public class Cliente {
+    private String nombre;
+    private String apellidos;
+
     private String nif;
 
     public String getNif() {
@@ -27,8 +30,6 @@ public class Cliente {
         this.nombre = nombre;
     }
 
-    private String nombre;
-    private String apellidos;
 
     public Cliente(String nif, String nombre, String apellidos) {
         this.nif = nif;
