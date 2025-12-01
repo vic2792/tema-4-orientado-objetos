@@ -29,4 +29,3 @@ public class Main {
         }while (option != 3);
         }
     }
-}
